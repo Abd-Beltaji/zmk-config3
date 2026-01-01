@@ -1,0 +1,11 @@
+
+---
+include:
+  - board: xiao_nrf52840
+    shield: mysplit_left
+
+  - board: xiao_nrf52840
+    shield: mysplit_right
+
+  - board: xiao_nrf52840
+    shield: mysplit_dongle
