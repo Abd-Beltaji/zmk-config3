@@ -1,0 +1,30 @@
+
+if SHIELD_MYSPLIT_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "My Split"
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 1
+
+endif
+
+if SHIELD_MYSPLIT_DONGLE
+
+config ZMK_USB
+    default y
+
+config ZMK_BLE
+    default y
+
+endif
+
+if SHIELD_MYSPLIT_LEFT || SHIELD_MYSPLIT_RIGHT || SHIELD_MYSPLIT_DONGLE
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_BLE
+    default y
+
+endif
