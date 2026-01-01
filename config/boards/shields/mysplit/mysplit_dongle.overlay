@@ -5,7 +5,3 @@
 };
 
 
-&zmk_hid {
-    status = "okay";
-};
-
