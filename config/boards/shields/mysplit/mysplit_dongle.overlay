@@ -7,6 +7,3 @@
     zmk,keyboard = <0>;
 };
 
-&kscan {
-    status = "disabled";
-};
