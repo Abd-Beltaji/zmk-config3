@@ -2,6 +2,7 @@
     chosen {
         zmk,usb = &usbd;
     };
+
+    /* This device has no key matrix */
+    zmk,keyboard = <0>;
 };
-
-
