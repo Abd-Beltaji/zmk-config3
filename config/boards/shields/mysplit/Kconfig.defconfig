@@ -17,9 +17,6 @@ config ZMK_USB
 config ZMK_BLE
     default y
 
-config ZMK_PHYSICAL_LAYOUT_APPLICATION
-    default n
-
 endif
 
 if SHIELD_MYSPLIT_LEFT || SHIELD_MYSPLIT_RIGHT || SHIELD_MYSPLIT_DONGLE
