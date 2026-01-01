@@ -1,6 +1,13 @@
-
 / {
     chosen {
-        zmk,ble-mouse = &ble_mouse;
+        zmk,usb = &usbd;
     };
+};
+
+&bt_split {
+    role = "central";
+};
+
+&zmk_hid {
+    status = "okay";
 };
