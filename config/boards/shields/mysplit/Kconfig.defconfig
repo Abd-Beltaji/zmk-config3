@@ -9,16 +9,6 @@ config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
 
 endif
 
-if SHIELD_MYSPLIT_LEFT || SHIELD_MYSPLIT_RIGHT || SHIELD_MYSPLIT_DONGLE
-
-config ZMK_SPLIT
-    default y
-
-config ZMK_SPLIT_BLE
-    default y
-
-endif
-
 if SHIELD_MYSPLIT_DONGLE
 
 config ZMK_USB
@@ -27,14 +17,17 @@ config ZMK_USB
 config ZMK_BLE
     default y
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-    default n
-
-config ZMK_SPLIT_BLE_PERIPHERAL
-    default n
-
-# Disable physical layout features not needed for dongle
 config ZMK_PHYSICAL_LAYOUT_APPLICATION
     default n
+
+endif
+
+if SHIELD_MYSPLIT_LEFT || SHIELD_MYSPLIT_RIGHT || SHIELD_MYSPLIT_DONGLE
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_BLE
+    default y
 
 endif
