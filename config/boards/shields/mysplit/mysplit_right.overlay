@@ -1,25 +1,32 @@
+
+/dts-v1/;
+/plugin/;
+
 / {
-    include <dt-bindings/zmk/matrix-transform.h>;
-    include "mysplit.dtsi";
+    #include <dt-bindings/zmk/matrix-transform.h>
+    #include "mysplit.dtsi"
 
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
-        row-gpios = <&xiaod 0 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN
-                     &xiaod 1 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN
-                     &xiaod 2 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN
-                     &xiaod 3 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN
-                     &xiaod 4 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN>;
-        col-gpios = <&xiaod 5 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN
-                     &xiaod 6 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN
-                     &xiaod 7 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN
-                     &xiaod 8 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN
-                     &xiaod 9 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN
-                     &xiaod 10 GPIO_ACTIVE_HIGH GPIO_PULL_DOWN>;
-        diode-direction = "col2row";  // or "row2col" based on your diode stripe
+        row-gpios =
+            <&xiaod 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&xiaod 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&xiaod 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&xiaod 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&xiaod 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        col-gpios =
+            <&xiaod 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&xiaod 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&xiaod 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&xiaod 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&xiaod 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&xiaod 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        diode-direction = "col2row";
         wakeup-source;
     };
 
     chosen {
-        zmk,kscan = &kscan0;  // ← THIS WAS MISSING
+        zmk,kscan = &kscan0;
     };
 };
+
