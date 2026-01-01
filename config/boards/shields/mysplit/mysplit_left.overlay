@@ -1,10 +1,6 @@
 
 #include "mysplit.dtsi"
-/ {
-    chosen {
-        zmk,keyboard = &mysplit_left;
-    };
-};
+
 &kscan0 {
     row-gpios
         = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
