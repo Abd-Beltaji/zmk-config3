@@ -4,10 +4,11 @@
     };
 };
 
-&bt_split {
+&zmk_ble {
     role = "central";
 };
 
 &zmk_hid {
     status = "okay";
 };
+
