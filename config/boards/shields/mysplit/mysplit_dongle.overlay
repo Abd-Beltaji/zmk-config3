@@ -1,5 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
+#include "mysplit.dtsi"
+
 / {
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
