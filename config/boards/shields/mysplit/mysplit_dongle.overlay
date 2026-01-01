@@ -1,9 +1,14 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
 / {
     chosen {
-        zmk,usb = &usbd;
+        zmk,kscan = &mock_kscan;
     };
 
-    /* This device has no key matrix */
-    zmk,keyboard = <0>;
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
 };
-
