@@ -1,6 +1,9 @@
 #include "mysplit.dtsi"
-chosen {
-    zmk,kscan = &kscan0;
+
+&{/} {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
 };
 &kscan0 {
     diode-direction = "col2row";  
